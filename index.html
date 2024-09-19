@@ -3,28 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        /* #wrapper{
-            width:500px;
-            display: flex;
-            border: 1px solid #000;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-        #wrapper p{
-            padding: 20px;
-        } */
-         /* #full{
-            height: 100vh;
-            width: 100%;
-         } */
-    </style>
+    <title>Expense_Tracker</title>
+    <link rel="stylesheet" href="style.css">
+   
 </head>
 <body >
-    
+    <div id="main">
         <div id="wrapper">
-        <input type="number" placeholder="Type Here">
+        <input type="number" placeholder="Type Amount">
     <p id="total">Total:</p>
     <p id="spent">Spent:</p>
     <p id="remaining">Remaining:</p>
@@ -32,12 +18,12 @@
 </div>
 <div id="Expenses">
     <!-- <p >item-detail:</p> -->
-     <input id="detail" type="text"  placeholder="item-detail">
+     <input id="detail" type="text"  placeholder="Item-Detail">
     <!-- <p >item amount:</p> -->
-     <input id="amount" type="number" placeholder="item amount">
+     <input id="amount" type="number" placeholder="Item-Amount">
     <button onclick="addtext()">Add Expense</button>
 </div>
-
+</div>
 <div id="tabeling">
     <table>
         <tr>
