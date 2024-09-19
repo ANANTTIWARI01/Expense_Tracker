@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #wrapper{
+            width:500px;
+            display: flex;
+            border: 1px solid #000;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        #wrapper p{
+            padding: 20px;
+        } */
+         /* #full{
+            height: 100vh;
+            width: 100%;
+         } */
+    </style>
+</head>
+<body >
+    
+        <div id="wrapper">
+        <input type="number" placeholder="Type Here">
+    <p id="total">Total:</p>
+    <p id="spent">Spent:</p>
+    <p id="remaining">Remaining:</p>
+    <!-- <button onclick="addtext()">click</button> -->
+</div>
+<div id="Expenses">
+    <!-- <p >item-detail:</p> -->
+     <input id="detail" type="text"  placeholder="item-detail">
+    <!-- <p >item amount:</p> -->
+     <input id="amount" type="number" placeholder="item amount">
+    <button onclick="addtext()">Add Expense</button>
+</div>
+
+<div id="tabeling">
+    <table>
+        <tr>
+            <th>S.NO</th>
+            <th>Info</th>
+            <th>Amount</th>
+        </tr>
+    </table>
+</div>
+
+</body>
+
+<script>
+
+let btn = document.querySelector("input")
+let para = document.querySelector("#total")
+let para0 = document.querySelector("#spent")
+let para1 = document.querySelector("#remaining")
+
+let ab = document.querySelector("#wrapper")
+let inp0 = document.querySelector("#detail")
+let inp1 = document.querySelector("#amount")
+
+let tabels = document.querySelector("table")
+let total =0 ;
+let y =0;
+let j = 0;
+let z = 0;
+
+
+function addtext(){
+    let totalamount = Number(btn.value);
+    let expenseamount = Number(inp1.value)
+    if(total === 0){
+    total = totalamount;
+    para.innerHTML = "Total :" + total;
+}
+
+    y += expenseamount;
+    // y = inp1.value;
+    para0.innerHTML = "Spent :" + y;
+    
+    z = Number(total) - Number(y);
+para1.innerHTML =  "Remaining :" + z;
+
+let tab = document.createElement("tr")
+
+let tabs = document.createElement("td")
+let tabs0 = document.createElement("td")
+let tabs1 = document.createElement("td")
+
+
+// let i = [];
+  j= ++j
+// j= ++j
+
+
+tabs.innerHTML = j ;
+tabs0.innerHTML = inp0.value;
+tabs1.innerHTML =inp1.value;
+
+tab.append(tabs)
+tab.append(tabs0)
+tab.append(tabs1)
+
+tabels.append(tab)
+// i.push(tab)
+
+
+
+// let  row = tabels.insertRow(1)
+//   var cell1 = row.insertCell(0);
+//   var cell2 = row.insertCell(0);
+//   var cell3 = row.insertCell(0);
+
+//   cell1.innerHTML = "NEW CELL1";
+//   cell2.innerHTML = "NEW CELL2";
+
+
+inp0.value="";  
+inp1.value="";
+
+
+
+
+
+}
+
+
+
+
+</script>
+</html>
